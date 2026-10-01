@@ -41,6 +41,6 @@ export CXX=clang++
 
 echo "[build_quickjs] Building quickjsFuzzer..."
 cmake -B "$BUILD_PATH" $CMAKE_ARG "$SCRIPT_DIR"
-cmake --build "$BUILD_PATH" -j "$USING_CORE" --target quickjsFuzzer QuickJSTest QuickJSConvert QuickJSCov
+cmake --build "$BUILD_PATH" -j "$USING_CORE" --target quickjsFuzzer QuickJSTest QuickJSConvert
 
 echo "[build_quickjs] Done."

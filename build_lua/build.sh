@@ -41,6 +41,6 @@ export CXX=clang++
 
 echo "[build_lua] Building luaFuzzer..."
 cmake -B "$BUILD_PATH" $CMAKE_ARG "$SCRIPT_DIR"
-cmake --build "$BUILD_PATH" -j "$USING_CORE" --target luaFuzzer LuaTest LuaConvert LuaCov
+cmake --build "$BUILD_PATH" -j "$USING_CORE" --target luaFuzzer LuaTest LuaConvert
 
 echo "[build_lua] Done."

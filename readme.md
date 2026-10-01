@@ -16,16 +16,14 @@ Syntax aware token/source codes text mutation based fuzzer.
 
 ## How to use
 
-- build instructed binary
-  1. `nix-shell scripts/cpython-inst.nix`
-  2. `./build.sh`
-  3. collect builtin info `python3 targets/CPython/builtins.py targets/CPython/builtins.json`
-- build coverage binary
-  1. `nix-shell scripts/cpython-cov.nix`
-  2. `./build_cov.sh`
+- cd target folder `cd build_<target>` (e.g. `cd build_cpython`)
+- build binaries, either:
+  - run `./build_wrapper.sh`
+  - use `nix-shell` to enter (different) environment then run `./build.sh` and `./build_cov.sh`
+- generate hints for vscode `./gen_hints_wrapper.sh`
 - run fuzzer `./run.sh`
 - after fuzzer terminated, build coverage result
-  1. `nix-shell scripts/cpython-cov.nix`
+  1. `nix-shell <target>-cov.nix` or `nix-shell <target>.nix` (if there is no special `-cov.nix`)
   2. `./run_cov.sh`
   3. draw map `python cov_map.py`(install dependencies by `pip install -r requirements.txt`)
 
