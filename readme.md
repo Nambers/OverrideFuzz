@@ -1,9 +1,9 @@
-# Grammar fuzzer
+# OverrideFuzz
 
 [![DOI badge](https://img.shields.io/badge/DOI-arXiv%3A2605.12563-blue)](https://arxiv.org/abs/2301.05062)
 
 Syntax aware token/source codes text mutation based fuzzer.  
-*Started in SEFCOM.*
+*Started in SEFCOM lab.*
 
 ## Targets
 
